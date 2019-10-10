@@ -1,0 +1,26 @@
+{
+  "name": "chat_example",
+  "version": "1.0.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./server/server.js"
+  },
+  "devDependencies": {
+    "http": "^0.0.0",
+    "express": "^4.16.2",
+    "btoa": "^1.1.2",
+    "morgan": "^1.9.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "base-64": "^0.1.0",
+    "cryptr": "^3.0.0",
+    "express-session": "^1.15.6",
+    "http-auth": "^3.2.3",
+    "localStorage": "^1.0.3",
+    "log4js": "^1.0.1"
+  }
+}
