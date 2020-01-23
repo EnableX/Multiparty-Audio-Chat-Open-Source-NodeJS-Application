@@ -29,7 +29,7 @@ var obj = {
         "auto_recording": false,
         "active_talker": true,
         "wait_moderator": false,
-        "quality": "HD",
+        "quality": "SD",
         "adhoc": false,
         "mode": "group"
     },
