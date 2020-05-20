@@ -21,6 +21,8 @@ When developing a Node Application with EnxRtc.js make sure to include the updat
 
 To get Live Demo of this Sample App, please get connected to our [Sales Team](mailto:sales@enablex.io).
 
+You may also try our Video Meeting and Webinar solutions here: https://web.enablex.io/ucaas/covid-19/
+
 
 
 ## 3. Installation
