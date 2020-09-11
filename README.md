@@ -17,12 +17,9 @@ When developing a Node Application with EnxRtc.js make sure to include the updat
 
 
 
-## 2. Demo
+## 2. Trial
 
-To get Live Demo of this Sample App, please get connected to our [Sales Team](mailto:sales@enablex.io).
-
-You may also try our Video Meeting and Webinar solutions here: https://web.enablex.io/ucaas/covid-19/
-
+Sign up for a free trial https://portal.enablex.io/cpaas/trial-sign-up/ or try our multiparty video chat https://try.enablex.io/
 
 
 ## 3. Installation
@@ -32,7 +29,7 @@ You may also try our Video Meeting and Webinar solutions here: https://web.enabl
 
 #### 3.1.1 App Id and App Key 
 
-* Register with EnableX [https://www.enablex.io] 
+* Register with EnableX [https://portal.enablex.io/cpaas/trial-sign-up/] 
 * Create your Application
 * Get your App ID and App Key delivered to your Email
 * Clone or download this Repository [https://github.com/EnableX/Multiparty-Audio-Chat-Open-Source-NodeJS-Application.git] & follow the steps further 
