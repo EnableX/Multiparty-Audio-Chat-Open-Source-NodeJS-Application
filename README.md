@@ -4,7 +4,7 @@ The Sample Web App demonstrates the use of APIs for EnableX platform to develop 
 
 RTC Applications hosted on EnableX platform run natively on supported set of web browsers without any additional plugin downloads. 
 
-This basic Multi-Party RTC Application is generated using HTML, CSS, Bootstrap, JavaScript, jQuery, Node.js and EnxRtc (The EnableX Web Toolkit). 
+This basic Multi-Party RTC Application is developed using HTML, CSS, Bootstrap, JavaScript, jQuery, Node.js and EnxRtc (The EnableX Web Toolkit). 
 
 > The details of the supported set of web browsers can be found here:
 > https://developer.enablex.io/video/browser-compatibility-of-enablex-video/
@@ -46,7 +46,7 @@ As you have Certificate or created a Self-Signed Certificate, create a directory
 
 #### 3.1.3 Configure
 
-Before you can run this application by hosting it locally you need to customize `server/vcxconfig.js` to meet your needs:
+Before you can run this application, you need to customize `server/vcxconfig.js` to meet project needs:
 ```javascript 
   vcxconfig.SERViCE = {
     name: "EnableX Sample Web App",     // Name of the Application [Change optional]
