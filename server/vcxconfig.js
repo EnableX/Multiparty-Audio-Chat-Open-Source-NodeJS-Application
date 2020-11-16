@@ -35,7 +35,7 @@ vcxconfig.Certificate = {
 
 vcxconfig.SERVER_API_SERVER = {
   host: 'api.enablex.io', // FQDN of Service
-  port: '', // PORT of Service (If specified by EnableX)
+  port: '443', // PORT of Service (If specified by EnableX)
 };
 
 vcxconfig.APP_ID = ''; // APP ID to access Server API

@@ -66,16 +66,11 @@ Before you can run this application, you need to customize `server/vcxconfig.js`
   };
 
   vcxconfig.Certificate = {
-    ssl_key:    "certs/example.key",              // Use the certificate ".key" [self signed or registered]
-    ssl_cert :  "certs/example.crt",              // Use the certificate ".crt" [self signed or registered]
-    sslCaCerts :  ["certs/example.ca-bundle"]     // Use the certificate CA[chain] [self signed or registered]
+    ssl_key:    "certs/example.key",    // Use the certificate ".key" [self signed or registered]
+    ssl_cert :  "certs/example.crt",    // Use the certificate ".crt" [self signed or registered]
+    sslCaCerts :  ''                    // Use the certificate CA[chain] [self signed or registered]
   };
 
-  vcxconfig.SERVER_API_SERVER = {
-    host: 'api.enablex.io',             // Hosted EnableX Server API Domain Name
-  };
-
-  vcxconfig.clientPath  = "../client";    // UI files location
   vcxconfig.APP_ID      = "YOUR_APP_ID";  // Enter Your App ID
   vcxconfig.APP_KEY     = "YOUR_APP_KEY"; // Enter Your App Key
 ```

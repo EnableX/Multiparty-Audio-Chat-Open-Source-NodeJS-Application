@@ -1,21 +1,29 @@
 {
-  "appenders": [
-    {
+  "appenders": {
+    "access": {
+      "type": "dateFile",
+      "filename": "../logs/app.log",
+      "pattern": "-yyyy-MM-dd",
+      "category": "http"
+    },
+    "app": {
       "type": "file",
-      "filename": "./../logs/app.log",
-      "maxLogSize": 1048576,
-      "backups": 5,
-      "layout": {
-        "type": "pattern",
-        "pattern": "%d{ddMMyyhhmmss}::%p::%c::%m",
-        "replaceConsole": true
-      }
+      "filename": "../logs/app.log",
+      "maxLogSize": 10485760,
+      "numBackups": 3
+    },
+    "errorFile": {
+      "type": "file",
+      "filename": "../logs/errors.log"
+    },
+    "errors": {
+      "type": "logLevelFilter",
+      "level": "ERROR",
+      "appender": "errorFile"
     }
-  ],
-  "levels": {
-    "AppApi": "INFO",
-    "Authorization":"INFO",
-    "Server":"INFO",
-    "ErrorHandling":"INFO"
+  },
+  "categories": {
+    "default": { "appenders": [ "app", "errors" ], "level": "DEBUG" },
+    "http": { "appenders": [ "access"], "level": "DEBUG" }
   }
 }
