@@ -1,39 +1,33 @@
-'use strict';
-var log4js = require('log4js');
+const log4js = require('log4js');
 
-//global.config = global.config || {};
+const logFile = require('./log4js_configuration.json');
 
-//global.config.logger = global.config.logger || {};
-
-var logFile = require('./log4js_configuration.json');
-
-var logJsonReplacer = function (key, value){
-    if (key){
-        if (typeof(value) === 'object'){
-            return '[Object]';
-        }
-        return value;
-    }else{
-        return value;
+const logJsonReplacer = (key, value) => {
+  if (key) {
+    if (typeof (value) === 'object') {
+      return '[Object]';
     }
+    return value;
+  }
+  return value;
 };
 
 log4js.configure(logFile);
 
 exports.logger = log4js;
 
-exports.logger.objectToLog = function (jsonInput) {
-    if (jsonInput === undefined){
-        return '';
-    }
-    if (typeof(jsonInput) !== 'object') {
-        return jsonInput;
-    } else if (jsonInput.constructor === Array) {
-        return '[Object]';
-    }
-    var jsonString = JSON.stringify (jsonInput, logJsonReplacer);
-    return jsonString.replace (/['"]+/g, '')
-        .replace(/[:]+/g, ': ')
-        .replace(/[,]+/g, ', ')
-        .slice(1,-1);
+exports.logger.objectToLog = (jsonInput) => {
+  if (jsonInput === undefined) {
+    return '';
+  }
+  if (typeof (jsonInput) !== 'object') {
+    return jsonInput;
+  } if (jsonInput.constructor === Array) {
+    return '[Object]';
+  }
+  const jsonString = JSON.stringify(jsonInput, logJsonReplacer);
+  return jsonString.replace(/['"]+/g, '')
+    .replace(/[:]+/g, ': ')
+    .replace(/[,]+/g, ', ')
+    .slice(1, -1);
 };
