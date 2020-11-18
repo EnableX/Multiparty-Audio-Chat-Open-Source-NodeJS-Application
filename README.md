@@ -54,25 +54,26 @@ The following below can also be used to create a self-signed certificate.
 
 #### 3.1.3 Configure
 
-Before you can run this application, you need to customize `server/vcxconfig.js` to meet project needs:
-```javascript 
-  vcxconfig.SERVICE = {
-    name: "EnableX Sample Web App",     // Name of the Application [Change optional]
-    version: "1.0.0",                   // Version [Change optional]
-    path: "/v1",                        // Route [Default /v1]
-    domain: "yourdomain.com",           // FQDN of  your hosting enviornment
-    port  : "4443",                     // FQDN of  your hosting port. You need sudo permission if you want to use standard 443
-    listen_ssl : true                   // SSL on/off key  [ Set always to "true" ]
-  };
+Before you can run this application, configure the service. Copy the `server/example.env` as `server/.env` and update the values. Or you can set following system environment variables instead:
 
-  vcxconfig.Certificate = {
-    ssl_key:    "certs/example.key",    // Use the certificate ".key" [self signed or registered]
-    ssl_cert :  "certs/example.crt",    // Use the certificate ".crt" [self signed or registered]
-    sslCaCerts :  ''                    // Use the certificate CA[chain] [self signed or registered]
-  };
+```javascript
+  SERVICE_PORT - Node port on which your application will run. Default port set is 5000
+  ENABLEX_APP_ID - Your EnableX `App ID` - It's your username for EnableX API and can be found at Dashboard > Projects https://portal.enablex.io/dashboard/
+  ENABLEX_APP_KEY - Your EnableX `App Key` - - It's your password for EnableX API and can be found at Dashboard > Projects https://portal.enablex.io/dashboard/
+```
 
-  vcxconfig.APP_ID      = "YOUR_APP_ID";  // Enter Your App ID
-  vcxconfig.APP_KEY     = "YOUR_APP_KEY"; // Enter Your App Key
+For Mac and Linux, open a terminal window and type the following commands. Note - Replace all the characters after the `=` with values from your EnableX account:
+```javascript
+  export SERVICE_PORT=XXXX
+  export ENABLEX_APP_ID=XXXXXXXXXX
+  export ENABLEX_APP_KEY=XXXXXXXXX
+```
+
+On Windows, open a powershell / command window and type the following commands. Note that there is no `=`, just the key and value separated by a space:
+```javascript
+  setx SERVICE_PORT 'XXXX'
+  setx ENABLEX_APP_ID 'XXXXXXXXX'
+  setx ENABLEX_APP_KEY 'XXXXXXXXX'
 ```
 
 ### 3.2 Build

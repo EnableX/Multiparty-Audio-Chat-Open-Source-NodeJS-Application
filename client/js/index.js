@@ -75,10 +75,10 @@ document.getElementById('create_room').addEventListener('click', (event) => {
   });
 });
 
-var createRoom = function (callback) {
+const createRoom = (callback) => {
   const xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
+    if (this.readyState === 4 && this.status === 200) {
       const response = JSON.parse(this.responseText);
       if (response.error) {
         $.toast({
@@ -94,7 +94,7 @@ var createRoom = function (callback) {
       }
     }
   };
-  xhttp.open('POST', '/createRoom/', true);
+  xhttp.open('POST', '/api/room/multi/', true);
   xhttp.setRequestHeader('Content-Type', 'application/json');
   xhttp.setRequestHeader('Authorization', `Basic ${btoa(`${username}:${password}`)}`);
   xhttp.send();

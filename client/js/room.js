@@ -27,6 +27,6 @@ const joinRoom = function (roomName, callback) {
       }
     }
   };
-  xhttp.open('GET', `/getRoom/${roomName}`, true);
+  xhttp.open('GET', `/api/get-room/${roomName}`, true);
   xhttp.send();
 };
