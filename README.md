@@ -12,7 +12,7 @@ This basic Multi-Party RTC Application is developed using HTML, CSS, Bootstrap, 
 
 ## 1. Important!
 
-When developing a Client Application with EnxRtc.js ( present in client/js ), make sure to replace the updated EnxRtc.js polyfills from https://developer.enablex.io/video-api/client-api/web-toolkit/ for RTCPeerConnection and getUserMedia. Otherwise your application will not work in web browsers.
+When developing a Client Application with EnxRtc.js ( present in client/js ), make sure to replace the old EnxRtc.js with updated EnxRtc.js polyfills from https://developer.enablex.io/video-api/client-api/web-toolkit/ for RTCPeerConnection and getUserMedia. Otherwise your application will not work in web browsers.
 
 ## 2. Trial
 
@@ -52,7 +52,7 @@ The following below can also be used to create a self-signed certificate.
   sudo chmod 755 ./certs/example.*
   cd ..
 ```
-Windows(Use gitbash)
+Windows(Use Git Bash)
 ```javascript
   cd Multiparty-Audio-Chat-Open-Source-NodeJS-Application
   cd server
