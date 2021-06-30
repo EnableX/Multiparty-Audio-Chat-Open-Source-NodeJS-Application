@@ -12,8 +12,7 @@ This basic Multi-Party RTC Application is developed using HTML, CSS, Bootstrap, 
 
 ## 1. Important!
 
-When developing a Client Application with EnxRtc.js, make sure to include the updated EnxRtc.js polyfills from https://developer.enablex.io/video-api/client-api/web-toolkit/ for RTCPeerConnection and getUserMedia. Otherwise your application will not work in web browsers.
-
+When developing a Client Application with EnxRtc.js ( present in client/js ), make sure to replace the updated EnxRtc.js polyfills from https://developer.enablex.io/video-api/client-api/web-toolkit/ for RTCPeerConnection and getUserMedia. Otherwise your application will not work in web browsers.
 
 ## 2. Trial
 
@@ -43,6 +42,8 @@ However you may use self-signed Certificate to run this application locally. The
 * https://www.akadia.com/services/ssh_test_certificate.html  
 
 The following below can also be used to create a self-signed certificate.
+
+ Linux/Mac
 ```javascript
   cd Multiparty-Audio-Chat-Open-Source-NodeJS-Application
   cd server
@@ -51,13 +52,22 @@ The following below can also be used to create a self-signed certificate.
   sudo chmod 755 ./certs/example.*
   cd ..
 ```
+Windows(Use gitbash)
+```javascript
+  cd Multiparty-Audio-Chat-Open-Source-NodeJS-Application
+  cd server
+  mkdir certs
+  openssl req -x509 -newkey rsa:4096 -keyout ./certs/example.key -out ./certs/example.crt -days 10000 -nodes
+  chmod 755 ./certs/example.*
+  cd ..
+```
 
 #### 3.1.3 Configure
 
 Before you can run this application, configure the service. Copy the `server/example.env` as `server/.env` and update the values. Or you can set following system environment variables instead:
 
 ```javascript
-  SERVICE_PORT - Node port on which your application will run. Default port set is 5000
+  SERVICE_PORT - Node port on which your application will run. Default port set is 3000
   ENABLEX_APP_ID - Your EnableX `App ID` - It's your username for EnableX API and can be found at Dashboard > Projects https://portal.enablex.io/dashboard/
   ENABLEX_APP_KEY - Your EnableX `App Key` - - It's your password for EnableX API and can be found at Dashboard > Projects https://portal.enablex.io/dashboard/
 ```
@@ -91,7 +101,7 @@ Run `node server.js` inside `server` folder for starting your Server.
 #### 3.2.2 Test 
 
 * Open a browser and go to [https://yourdomain.com:4443/](https://yourdomain.com:4443/). The browser should load the App. 
-* Allow access to Camera and Mic as and when prompted to start your first RTC Call through EnableX
+* Allow access to Mic as and when prompted to start your first RTC Call through EnableX
 
 
 ## 4. Server API
