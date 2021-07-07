@@ -1,4 +1,4 @@
-# Multi-Party RTC: A Sample Web App using Node.js with EnableX Web Toolkit
+# Multiparty Audio Chat Open Source NodeJS Application
 
 The Sample Web App demonstrates the use of APIs for EnableX platform to develop basic Multi-Party RTC (Real Time Communication) Application. The main motivation behind this application is to demonstrate usage of APIs and allow developers to ramp up on app by hosting on their own devices instead of directly using servers.
 
@@ -25,9 +25,9 @@ Sign up for a free trial https://portal.enablex.io/cpaas/trial-sign-up/ or try o
 
 #### 3.1.1 App Id and App Key 
 
-* Register with EnableX [https://portal.enablex.io/cpaas/trial-sign-up/] 
-* Create your Application
-* Get your App ID and App Key
+* Create a free account on EnableX [https://portal.enablex.io/cpaas/trial-sign-up/]
+* Create your Project
+* Get the App ID and App Key generated against the Project
 * Clone this repository `git clone https://github.com/EnableX/Multiparty-Audio-Chat-Open-Source-NodeJS-Application.git --recursive` & follow the steps further 
 
 
@@ -93,6 +93,7 @@ Run `npm install --save` to build the project and the build artifacts will be st
 #### 3.2.1 Run Server
 
 Run `node server.js` inside `server` folder for starting your Server. 
+
 ```javascript
   cd server
   node server.js
@@ -100,8 +101,8 @@ Run `node server.js` inside `server` folder for starting your Server.
 
 #### 3.2.2 Test 
 
-* Open a browser and go to [https://yourdomain.com:4443/](https://yourdomain.com:4443/). The browser should load the App. 
-* Allow access to Mic as and when prompted to start your first RTC Call through EnableX
+* Open a browser and go to [https://localhost:3000/](https://localhost:3000/). The browser should load the App. 
+* Allow access to Mic, when prompted to start your first RTC Call through EnableX.
 
 
 ## 4. Server API
